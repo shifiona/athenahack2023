@@ -135,6 +135,7 @@
     width:200px;
     height: auto;
     float: relative;
+    text-align: center;
 }
 
 .recipeImage img {
@@ -149,6 +150,10 @@
  .recipeImage img:hover{
     transform: scale(1.05); 
     transition: all 0.3s ease;
+ }
+
+ .recipedesc{
+    font-size: 20px;
  }
 
  .search__bar{
@@ -184,6 +189,10 @@
      display:grid;
      justify-content:right;
      margin: auto;
+ }
+
+ .submit{
+    border-color:#fee0b9;
  }
 
  .body{
