@@ -9,12 +9,58 @@
     <link rel="stylesheet" href="search.css">
 </head>
 
+<! -- Calls a function on the page load. -- >
+<element onload="myfunction_onload">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<! -- This script runs the python script on the page load -->
+<script>
+    function myfunction_onload(){
+        $.ajax({
+            url: "flasktest.py",
+             context: document.body
+            })
+        }
+    </script>
+<! -- This script runs the python script when the button is clicked -->
+<script>
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"http://127.0.0.1:5000//test",
+            context: document.body,
+            success: function(result) {
+                console.log(result)
+                result = JSON.parse(result)
+                console.log(result)
+                document.getElementById("title").innerText=result["test1"];
+            }
+        });
+    }
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"http://127.0.0.1:5000//recipes?counts=0&name=" + document.myform.searchtext.value,
+            context: document.body,
+            success: function(result) {
+                console.log(result)
+                result = JSON.parse(result)
+                console.log(result)
+                document.getElementById("description").innerText=result[0];
+            }
+        });
+    }
+
+    function myfuntion_onerecipe(){
+        document.body.innerHTML = 'hello';
+    }
+</script>
+
+
 <body>
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="#home" id="navbar__logo">
-                <img src="/icons/cookbook.png" alt="CookBook Logo Home Page" width=80 height=80/>
+                <img src="cookbook.png" alt="CookBook Logo Home Page" width=80 height=80/>
             </a>
 
             <div id="title">
@@ -48,15 +94,22 @@
 
     <!-- Search Bar -->
     <div class="search__bar">
-        <img src="/icons/search.png" width=80 height=80/>
-        <input type="text" placeholder="Find your next recipe...">
+        <button type="submit" onclick='myfunction_clickevent()'>
+        <img src="search.png" width=80 height=80/>
+    </button>
+        <form name="myform" onsubmit="return myfunction_clickevent();" method="GET">
+        <input type="text" name="searchtext" placeholder="Find your next recipe...">
+    </form>
     </div>
 
     <!-- Explore Page Recipes -->
 
     <div class="recipeImage_container">
         <div class="recipeImage" >
+            <button type="submit" onclick='myfunction_onerecipe()'>
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+            </button>
+    
         </div>
         <div class="recipeImage">
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
@@ -78,5 +131,6 @@
         </div>
     </div>
 
+    <h2 id="description">works</h2>
 </body>
 </html>
