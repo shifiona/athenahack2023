@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Home Page</title>
+</head>
+<! -- Calls a function on the page load. -- >
+<element onload="myfunction_onload">
+<button type="submit" onclick='myfunction_clickevent()'>Run my Python!</button>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<! -- This script runs the python script on the page load -->
+<script>
+    function myfunction_onload(){
+        $.ajax({
+            url: "flasktest.py",
+             context: document.body
+            })
+        }
+    </script>
+<! -- This script runs the python script when the button is clicked -->
+<script>
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"http://127.0.0.1:5000//test",
+            context: document.body,
+            success: function(result) {
+                console.log(result)
+                result = JSON.parse(result)
+                console.log(result)
+                document.getElementById("title").innerText=result["test1"];
+            }
+        });
+    }
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"http://127.0.0.1:5000//recipes?counts=6&name=chicken",
+            context: document.body,
+            success: function(result) {
+                console.log(result)
+                result = JSON.parse(result)
+                console.log(result)
+                document.getElementById("description").innerText=result[0];
+                document.getElementById("hello").innerText=result[1];
+            }
+        });
+    }
+</script>
+
+<body>
+    <h1 id="title">Welcome</h1>
+    <h2 id="description">works</h2>
+    <textarea name = "hello" rows="2" cols = "75">
+        hello
+    </textarea>
+</body>
+</html>
