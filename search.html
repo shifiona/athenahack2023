@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="search.css">
 </head>
 
-<! -- Calls a function on the page load. -- >
+<!-- Calls a function on the page load. -->
 <element onload="myfunction_onload">
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<! -- This script runs the python script on the page load -->
+<!-- This script runs the python script on the page load -->
 <script>
     function myfunction_onload(){
         $.ajax({
@@ -22,7 +22,7 @@
             })
         }
     </script>
-<! -- This script runs the python script when the button is clicked -->
+<!-- This script runs the python script when the button is clicked -->
 <script>
     function myfunction_clickevent(){
         $.ajax({
@@ -59,8 +59,8 @@
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="#home" id="navbar__logo">
-                <img src="cookbook.png" alt="CookBook Logo Home Page" width=80 height=80/>
+            <a href="search.html" id="navbar__logo">
+                <img src="/icons/cookbook.png" alt="CookBook Logo Home Page" width=80 height=80/>
             </a>
 
             <div id="title">
@@ -69,17 +69,17 @@
 
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="#home" class="navbar__links">
+                    <a href="addrecipe.html" class="navbar__links">
                         Add Recipe
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">
+                    <a href="search.html" class="navbar__links" id="home-page">
                         Find Recipes
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#MyCookBook" class="navbar__links" id="MyCookBook-page">
+                    <a href="mycookbook.html" class="navbar__links" id="MyCookBook-page">
                         My Recipe Book
                     </a>
                 </li>
@@ -95,7 +95,7 @@
     <!-- Search Bar -->
     <div class="search__bar">
         <button type="submit" onclick='myfunction_clickevent()'>
-        <img src="search.png" width=80 height=80/>
+        <img src="icons/search.png" width=80 height=80/>
     </button>
         <form name="myform" onsubmit="return myfunction_clickevent();" method="GET">
         <input type="text" name="searchtext" placeholder="Find your next recipe...">
@@ -109,25 +109,42 @@
             <button type="submit" onclick='myfunction_onerecipe()'>
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
             </button>
-    
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
         <div class="recipeImage">
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
         <div class="recipeImage">
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
     </div>
 
     <div class="recipeImage_container">
         <div class="recipeImage" >
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
         <div class="recipeImage">
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
         <div class="recipeImage">
             <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
+            <div class="recipedesc">
+                name of item
+            </div>
         </div>
     </div>
 

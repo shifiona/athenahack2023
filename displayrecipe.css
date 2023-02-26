@@ -87,7 +87,7 @@
     width:100%; 
 }
 
-.button{
+.button1{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -119,81 +119,53 @@
     transform: scale(1.25); 
 }
 
-.recipeImage_container{
-    margin-left: 15%;
-    margin-top: 5%;
-    justify-content: center;
-    align-items: center; 
-    float: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    display:grid;
-    position: center;
+.recipeInformation{
+    display:flex;
 }
 
-.recipeImage{    
-    justify-content:center;
-    width:200px;
-    height: auto;
-    float: relative;
+.recipeTitle{
+    text-align: center;
+    font-size: 3.5vw;
+    height:40%;
+    padding-left: 1%;
+    padding-top: 1%;
+    max-height: 90%;
+    letter-spacing: 10px;
+    font-family: "Playfair Display";
+}
+
+.recipeAuthor{
+    font-size: 20px;
+    padding-left: 3%;
+    justify-self: right;
+}
+
+.recipeImage{
+    display:grid;
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-right: 0px;
+    justify-content:left;
+    float: left;
+    width:600px;
 }
 
 .recipeImage img {
     display: grid;
-    height: 100%;
-    width: 100%;
-    justify-content:center;
-    align-items: center;
-    margin: auto;
- }
- 
- .recipeImage img:hover{
-    transform: scale(1.05); 
-    transition: all 0.3s ease;
+    max-width:100%;
+    height:auto;
+    margin-top: 5%;
+    margin-left: 5%;
  }
 
- .welcome__text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
-    padding-top:30px;
-    font-size: 40px;
-    width: 1300px;
-    text-align: center;
-    letter-spacing: 6px;
-    color:#390f03;
- }
+.recipeIngredients{
+    padding-left: 3%;
+    padding-top: 3%;
+    font-size: 30px;
+}
 
- .welcome__text{
-    transform: scale(1.05); 
- }
-
-
- .body{
-     padding:0;
-     margin:0;
-     justify-content: center;
-     align-items: center;
- }
-
-@media screen and (max-width: 960px){
-    .navbar__container{
-        display:flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 2;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-    }
-
-    .navbar__menu{
-        display:grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width:100;
-        position: absolute;
-        top: -1000px;
-        
-    }
+.recipeInstructions{
+    padding-left: 5%;
+    padding-top: 3%;
+    font-size: 30px;
 }

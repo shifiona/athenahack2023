@@ -148,6 +148,7 @@
  
  .recipeImage img:hover{
     transform: scale(1.05); 
+    transition: all 0.3s ease;
  }
 
  .search__bar{
@@ -176,6 +177,7 @@
 
  .search__bar input[type=text]:hover{
     transform: scale(1.05); 
+    transition: all 0.3s ease;
  }
 
  .search__bar img{

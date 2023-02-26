@@ -2,11 +2,12 @@
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Prata" />
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" /><link rel='stylesheet' href='//fonts.googleapis.com/css?family=Prata' type='text/css' />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Cookbook</title>
-    <link rel="stylesheet" href="mycookbook.css">
+    <link rel="stylesheet" href="displayrecipe.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
                     </a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="#log-out" class="button" id="logout">
+                    <a href="#home" class="button1" id="logout">
                         Log Out
                     </a>
                 </li>
@@ -46,36 +47,25 @@
         </div>
     </nav>
 
-    <!-- Welcome Text -->
-    <div class="welcome__text">
-        Hi (username)! <br> Here is your recipe book:
-    </div>
-
-    <!-- Recipes From Your Recipe Book -->
-
-    <div class="recipeImage_container">
-        <div class="recipeImage" >
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
-        </div>
-        <div class="recipeImage">
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
-        </div>
-        <div class="recipeImage">
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+    <!-- Recipe Display -->
+    <div class="recipeTitle">
+        chicken, beef, pasta!
+        <div class="recipeAuthor">
+            Carol Folt
         </div>
     </div>
-
-    <div class="recipeImage_container">
-        <div class="recipeImage" >
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
-        </div>
+    <div class= "recipeInformation">
         <div class="recipeImage">
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+            <div class="recipeImage" >
+                <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/425138.jpg">
+            </div>
         </div>
-        <div class="recipeImage">
-            <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/249668.jpg">
+        <div class="recipeIngredients">
+            Ingredients
+        </div>
+        <div class="recipeInstructions">
+            Instructions
         </div>
     </div>
 
 </body>
-</html>
