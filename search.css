@@ -121,7 +121,7 @@
 
 .recipeImage_container{
     margin-left: 15%;
-    margin-top: 5%;
+    margin-top: 2%;
     justify-content: center;
     align-items: center; 
     float: center;
@@ -161,7 +161,7 @@
     justify-content: center;
     align-items: center;
     margin:auto;
-    padding-top:30px;
+    padding-top:40px;
  }
 
  .search__bar input[type=text]{
