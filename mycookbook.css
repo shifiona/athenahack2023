@@ -15,8 +15,8 @@
     width: auto;
     color: white;
     padding-top: 15px;
-    
-    font-size: 42px;
+    margin-left: 20px;
+    font-size: 35px;
     letter-spacing: 20px;
     font-family: 'Prata';
 }
@@ -43,6 +43,7 @@
     width:100%;
     max-width: 1300px;
     margin: 0 auto;
+    margin-left: 20px;
     padding: 0 0;
 }
 
@@ -162,28 +163,10 @@
     color:#390f03;
  }
 
- .search__bar input[type=text]{
-    float:left;
-    display: flex;
-    background-color:#671B05;
-    text-align: left;
-    padding-left: 15px;
-    border-radius: 40px;
-    margin:auto;
-    font-size: 40px;
-    width: 1300px;
-    color:#fff;
- }
-
  .welcome__text{
     transform: scale(1.05); 
  }
 
- .search__bar img{
-     display:grid;
-     justify-content:right;
-     margin: auto;
- }
 
  .body{
      padding:0;
